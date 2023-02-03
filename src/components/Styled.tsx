@@ -83,6 +83,26 @@ export const StyledButtonWrapper = styled(
         height: "100%", // This is 100% - indicator height - indicator margin
         top: "0"
     } : undefined),
-    ...($next ? { right: 0 } : undefined),
-    ...($prev ? { left: 0 } : undefined),
+    ...($next ? {
+        '@media (min-width: 705px)': {
+            right: '30%',
+        },
+        '@media (max-width: 705px)': {
+            right: '20%',
+        },
+        '@media (max-width: 476px)': {
+            right: '20%',
+        },
+    } : undefined),
+    ...($prev ? {
+        '@media (min-width: 705px)': {
+            left: '30%',
+        },
+        '@media (max-width: 705px)': {
+            left: '20%',
+        },
+        '@media (max-width: 476px)': {
+            left: '20%',
+        },
+    } : undefined),
 }));
