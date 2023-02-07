@@ -10,7 +10,7 @@ import
     StyledRoot
 } from './Styled';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Button } from '@mui/material';
+import { Typography } from '@mui/material';
 
 
 export const Carousel = (props: CarouselProps) =>
@@ -152,7 +152,7 @@ export const Carousel = (props: CarouselProps) =>
         navButtonsWrapperProps,
         NavButton,
 
-        // NextIcon,
+        NextIcon,
         PrevIcon,
 
         indicators,
@@ -224,7 +224,20 @@ export const Carousel = (props: CarouselProps) =>
 
             {!navButtonsAlwaysInvisible && showButton(true) &&
                 <StyledButtonWrapper $next $prev={false} $fullHeightHover={fullHeightHover} {...navButtonsWrapperProps}>
-                    <Button>hello</Button>
+                    {NavButton !== undefined ?
+                        NavButton({ onClick: next, next: true, prev: false, ...navButtonsProps })
+                        :
+                        <StyledIconButton
+                            $alwaysVisible={navButtonsAlwaysVisible}
+                            $fullHeightHover={fullHeightHover}
+                            onClick={next}
+                            aria-label="Next"
+                            {...navButtonsProps}
+                        >
+                            {NextIcon}
+                        </StyledIconButton>
+                    }
+                    <Typography>Next Card</Typography>
                 </StyledButtonWrapper>
             }
 
@@ -241,6 +254,7 @@ export const Carousel = (props: CarouselProps) =>
                             {...navButtonsProps}
                         >
                             {PrevIcon}
+                            <Typography>Previous Card</Typography>
                         </StyledIconButton>
                     }
                 </StyledButtonWrapper>
