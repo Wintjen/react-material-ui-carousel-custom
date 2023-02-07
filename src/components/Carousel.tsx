@@ -10,6 +10,7 @@ import
     StyledRoot
 } from './Styled';
 import React, { useCallback, useEffect, useState } from 'react';
+import { Typography } from '@mui/material';
 
 
 export const Carousel = (props: CarouselProps) =>
@@ -234,6 +235,7 @@ export const Carousel = (props: CarouselProps) =>
                             {...navButtonsProps}
                         >
                             {NextIcon}
+                            <Typography>Next Card</Typography>
                         </StyledIconButton>
                     }
                 </StyledButtonWrapper>
@@ -252,6 +254,7 @@ export const Carousel = (props: CarouselProps) =>
                             {...navButtonsProps}
                         >
                             {PrevIcon}
+                            <Typography>Previous Card</Typography>
                         </StyledIconButton>
                     }
                 </StyledButtonWrapper>

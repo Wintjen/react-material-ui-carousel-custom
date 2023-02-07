@@ -36,6 +36,7 @@ var Indicators_1 = require("./Indicators");
 var util_1 = require("./util");
 var Styled_1 = require("./Styled");
 var react_1 = __importStar(require("react"));
+var material_1 = require("@mui/material");
 var Carousel = function (props) {
     var _a = (0, react_1.useState)({
         active: 0,
@@ -140,12 +141,16 @@ var Carousel = function (props) {
             react_1.default.createElement(Styled_1.StyledButtonWrapper, __assign({ "$next": true, "$prev": false, "$fullHeightHover": fullHeightHover }, navButtonsWrapperProps), NavButton !== undefined ?
                 NavButton(__assign({ onClick: next, next: true, prev: false }, navButtonsProps))
                 :
-                    react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: next, "aria-label": "Next" }, navButtonsProps), NextIcon)),
+                    react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: next, "aria-label": "Next" }, navButtonsProps),
+                        NextIcon,
+                        react_1.default.createElement(material_1.Typography, null, "Next Card"))),
         !navButtonsAlwaysInvisible && showButton(false) &&
             react_1.default.createElement(Styled_1.StyledButtonWrapper, __assign({ "$next": false, "$prev": true, "$fullHeightHover": fullHeightHover }, navButtonsWrapperProps), NavButton !== undefined ?
                 NavButton(__assign({ onClick: prev, next: false, prev: true }, navButtonsProps))
                 :
-                    react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: prev, "aria-label": "Previous" }, navButtonsProps), PrevIcon)),
+                    react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: prev, "aria-label": "Previous" }, navButtonsProps),
+                        PrevIcon,
+                        react_1.default.createElement(material_1.Typography, null, "Previous Card"))),
         indicators ?
             react_1.default.createElement(Indicators_1.Indicators, { length: Array.isArray(children) ? children.length : 0, active: state.active, press: setNext, indicatorContainerProps: indicatorContainerProps, indicatorIconButtonProps: indicatorIconButtonProps, activeIndicatorIconButtonProps: activeIndicatorIconButtonProps, IndicatorIcon: IndicatorIcon }) : null));
 };
