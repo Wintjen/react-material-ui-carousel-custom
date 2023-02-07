@@ -10,6 +10,8 @@
 /ts_demo
 
 # production
+/build
+/dist
 /demodist
 
 demo/build

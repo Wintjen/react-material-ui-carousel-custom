@@ -83,6 +83,6 @@ export const StyledButtonWrapper = styled(
         height: "100%", // This is 100% - indicator height - indicator margin
         top: "0"
     } : undefined),
-    ...($next ? { right: '20%' } : undefined),
+    ...($next ? { right: 0 } : undefined),
     ...($prev ? { left: 0 } : undefined),
 }));
