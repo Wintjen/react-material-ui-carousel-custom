@@ -48,14 +48,11 @@ export const Carousel = (props: CarouselProps) =>
 
     const changeChild = useCallback(
         (e: KeyboardEvent) => {
-            console.log('howdy')
             if (e.key === "ArrowLeft") {
-                console.log('howdy I"m working')
                 let last = Array.isArray(children) ? children.length - 1 : 0;
                 const nextActive = state.active - 1 < 0 ? (cycleNavigation ? last : state.active) : state.active - 1;
                 setNext(nextActive, false)
             } else if (e.key === "ArrowRight") {
-                console.log('howdy no I"m working')
                 let last = Array.isArray(children) ? children.length - 1 : 0;
                 const nextActive = state.active + 1 > last ? (cycleNavigation ? 0 : state.active) : state.active + 1;
                 setNext(nextActive, true)
