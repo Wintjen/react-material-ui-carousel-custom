@@ -153,7 +153,7 @@ export const Carousel = (props: CarouselProps) =>
         NavButton,
 
         NextIcon,
-        PrevIcon,
+        // PrevIcon,
 
         indicators,
         indicatorContainerProps,
@@ -253,10 +253,10 @@ export const Carousel = (props: CarouselProps) =>
                             aria-label="Previous"
                             {...navButtonsProps}
                         >
-                            {PrevIcon}
+                            {/* {PrevIcon} */}
+                            <Typography>Previous Card</Typography>
                         </StyledIconButton>
                     }
-                <Typography>Previous Card</Typography>
                 </StyledButtonWrapper>
             }
 

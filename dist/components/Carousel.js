@@ -118,7 +118,9 @@ var Carousel = function (props) {
             next: isNext
         });
     };
-    var children = sanitizedProps.children, sx = sanitizedProps.sx, className = sanitizedProps.className, height = sanitizedProps.height, stopAutoPlayOnHover = sanitizedProps.stopAutoPlayOnHover, animation = sanitizedProps.animation, duration = sanitizedProps.duration, swipe = sanitizedProps.swipe, navButtonsAlwaysInvisible = sanitizedProps.navButtonsAlwaysInvisible, navButtonsAlwaysVisible = sanitizedProps.navButtonsAlwaysVisible, cycleNavigation = sanitizedProps.cycleNavigation, fullHeightHover = sanitizedProps.fullHeightHover, navButtonsProps = sanitizedProps.navButtonsProps, navButtonsWrapperProps = sanitizedProps.navButtonsWrapperProps, NavButton = sanitizedProps.NavButton, NextIcon = sanitizedProps.NextIcon, PrevIcon = sanitizedProps.PrevIcon, indicators = sanitizedProps.indicators, indicatorContainerProps = sanitizedProps.indicatorContainerProps, indicatorIconButtonProps = sanitizedProps.indicatorIconButtonProps, activeIndicatorIconButtonProps = sanitizedProps.activeIndicatorIconButtonProps, IndicatorIcon = sanitizedProps.IndicatorIcon;
+    var children = sanitizedProps.children, sx = sanitizedProps.sx, className = sanitizedProps.className, height = sanitizedProps.height, stopAutoPlayOnHover = sanitizedProps.stopAutoPlayOnHover, animation = sanitizedProps.animation, duration = sanitizedProps.duration, swipe = sanitizedProps.swipe, navButtonsAlwaysInvisible = sanitizedProps.navButtonsAlwaysInvisible, navButtonsAlwaysVisible = sanitizedProps.navButtonsAlwaysVisible, cycleNavigation = sanitizedProps.cycleNavigation, fullHeightHover = sanitizedProps.fullHeightHover, navButtonsProps = sanitizedProps.navButtonsProps, navButtonsWrapperProps = sanitizedProps.navButtonsWrapperProps, NavButton = sanitizedProps.NavButton, NextIcon = sanitizedProps.NextIcon, 
+    // PrevIcon,
+    indicators = sanitizedProps.indicators, indicatorContainerProps = sanitizedProps.indicatorContainerProps, indicatorIconButtonProps = sanitizedProps.indicatorIconButtonProps, activeIndicatorIconButtonProps = sanitizedProps.activeIndicatorIconButtonProps, IndicatorIcon = sanitizedProps.IndicatorIcon;
     var showButton = function (next) {
         if (next === void 0) { next = true; }
         if (cycleNavigation)
@@ -145,12 +147,11 @@ var Carousel = function (props) {
                         react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: next, "aria-label": "Next" }, navButtonsProps), NextIcon),
                 react_1.default.createElement(material_1.Typography, null, "Next Card")),
         !navButtonsAlwaysInvisible && showButton(false) &&
-            react_1.default.createElement(Styled_1.StyledButtonWrapper, __assign({ "$next": false, "$prev": true, "$fullHeightHover": fullHeightHover }, navButtonsWrapperProps),
-                NavButton !== undefined ?
-                    NavButton(__assign({ onClick: prev, next: false, prev: true }, navButtonsProps))
-                    :
-                        react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: prev, "aria-label": "Previous" }, navButtonsProps), PrevIcon),
-                react_1.default.createElement(material_1.Typography, null, "Previous Card")),
+            react_1.default.createElement(Styled_1.StyledButtonWrapper, __assign({ "$next": false, "$prev": true, "$fullHeightHover": fullHeightHover }, navButtonsWrapperProps), NavButton !== undefined ?
+                NavButton(__assign({ onClick: prev, next: false, prev: true }, navButtonsProps))
+                :
+                    react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: prev, "aria-label": "Previous" }, navButtonsProps),
+                        react_1.default.createElement(material_1.Typography, null, "Previous Card"))),
         indicators ?
             react_1.default.createElement(Indicators_1.Indicators, { length: Array.isArray(children) ? children.length : 0, active: state.active, press: setNext, indicatorContainerProps: indicatorContainerProps, indicatorIconButtonProps: indicatorIconButtonProps, activeIndicatorIconButtonProps: activeIndicatorIconButtonProps, IndicatorIcon: IndicatorIcon }) : null));
 };
