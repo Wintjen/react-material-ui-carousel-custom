@@ -268,8 +268,8 @@ export const Carousel = (props: CarouselProps) =>
                     style={{
                         position: 'absolute',
                         marginTop: '30px',
-                        width: '100px',
-                        left: '-10px'
+                        width: '135px',
+                        left: '10px'
                     }}
                     >
                         Previous Card

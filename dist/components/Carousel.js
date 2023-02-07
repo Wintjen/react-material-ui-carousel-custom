@@ -158,8 +158,8 @@ var Carousel = function (props) {
                 react_1.default.createElement(material_1.Typography, { style: {
                         position: 'absolute',
                         marginTop: '30px',
-                        width: '100px',
-                        left: '-10px'
+                        width: '135px',
+                        left: '10px'
                     } }, "Previous Card")),
         indicators ?
             react_1.default.createElement(Indicators_1.Indicators, { length: Array.isArray(children) ? children.length : 0, active: state.active, press: setNext, indicatorContainerProps: indicatorContainerProps, indicatorIconButtonProps: indicatorIconButtonProps, activeIndicatorIconButtonProps: activeIndicatorIconButtonProps, IndicatorIcon: IndicatorIcon }) : null));
