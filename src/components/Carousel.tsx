@@ -249,7 +249,7 @@ export const Carousel = (props: CarouselProps) =>
                         <StyledIconButton
                             $alwaysVisible={navButtonsAlwaysVisible}
                             $fullHeightHover={fullHeightHover}
-                            onClick={prev}
+                            // onClick={prev}
                             aria-label="Previous"
                             {...navButtonsProps}
                         >
