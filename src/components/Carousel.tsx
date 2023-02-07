@@ -237,7 +237,15 @@ export const Carousel = (props: CarouselProps) =>
                             {NextIcon}
                         </StyledIconButton>
                     }
-                    <Typography>Next Card</Typography>
+                    <Typography style={{
+                        position: 'absolute',
+                        marginTop: '30px',
+                        width: '100px',
+                        right: '-10px'
+                    }}
+                    >
+                        Next Card
+                    </Typography>
                 </StyledButtonWrapper>
             }
 
@@ -254,9 +262,18 @@ export const Carousel = (props: CarouselProps) =>
                             {...navButtonsProps}
                         >
                             {PrevIcon}
-                            <Typography>Previous Card</Typography>
                         </StyledIconButton>
                     }
+                    <Typography
+                    style={{
+                        position: 'absolute',
+                        marginTop: '30px',
+                        width: '100px',
+                        left: '-10px'
+                    }}
+                    >
+                        Previous Card
+                    </Typography>
                 </StyledButtonWrapper>
             }
 

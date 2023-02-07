@@ -1,6 +1,6 @@
 {
     "name": "react-material-ui-carousel-custom",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "license": "MIT",
     "description": "A Generic, extendible Carousel UI component for React using Material UI",
     "homepage": "https://github.com/Wintjen/react-material-ui-carousel-custom",
