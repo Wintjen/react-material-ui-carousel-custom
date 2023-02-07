@@ -83,5 +83,5 @@ exports.StyledButtonWrapper = (0, material_1.styled)("div", { shouldForwardProp:
         } }, ($fullHeightHover ? {
         height: "100%",
         top: "0"
-    } : undefined)), ($next ? { right: 0 } : undefined)), ($prev ? { left: 0 } : undefined)));
+    } : undefined)), ($next ? { right: '20%' } : undefined)), ($prev ? { left: 0 } : undefined)));
 });

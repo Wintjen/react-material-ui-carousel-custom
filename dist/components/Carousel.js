@@ -36,7 +36,6 @@ var Indicators_1 = require("./Indicators");
 var util_1 = require("./util");
 var Styled_1 = require("./Styled");
 var react_1 = __importStar(require("react"));
-var material_1 = require("@mui/material");
 var Carousel = function (props) {
     var _a = (0, react_1.useState)({
         active: 0,
@@ -118,7 +117,7 @@ var Carousel = function (props) {
             next: isNext
         });
     };
-    var children = sanitizedProps.children, sx = sanitizedProps.sx, className = sanitizedProps.className, height = sanitizedProps.height, stopAutoPlayOnHover = sanitizedProps.stopAutoPlayOnHover, animation = sanitizedProps.animation, duration = sanitizedProps.duration, swipe = sanitizedProps.swipe, navButtonsAlwaysInvisible = sanitizedProps.navButtonsAlwaysInvisible, navButtonsAlwaysVisible = sanitizedProps.navButtonsAlwaysVisible, cycleNavigation = sanitizedProps.cycleNavigation, fullHeightHover = sanitizedProps.fullHeightHover, navButtonsProps = sanitizedProps.navButtonsProps, navButtonsWrapperProps = sanitizedProps.navButtonsWrapperProps, NavButton = sanitizedProps.NavButton, PrevIcon = sanitizedProps.PrevIcon, indicators = sanitizedProps.indicators, indicatorContainerProps = sanitizedProps.indicatorContainerProps, indicatorIconButtonProps = sanitizedProps.indicatorIconButtonProps, activeIndicatorIconButtonProps = sanitizedProps.activeIndicatorIconButtonProps, IndicatorIcon = sanitizedProps.IndicatorIcon;
+    var children = sanitizedProps.children, sx = sanitizedProps.sx, className = sanitizedProps.className, height = sanitizedProps.height, stopAutoPlayOnHover = sanitizedProps.stopAutoPlayOnHover, animation = sanitizedProps.animation, duration = sanitizedProps.duration, swipe = sanitizedProps.swipe, navButtonsAlwaysInvisible = sanitizedProps.navButtonsAlwaysInvisible, navButtonsAlwaysVisible = sanitizedProps.navButtonsAlwaysVisible, cycleNavigation = sanitizedProps.cycleNavigation, fullHeightHover = sanitizedProps.fullHeightHover, navButtonsProps = sanitizedProps.navButtonsProps, navButtonsWrapperProps = sanitizedProps.navButtonsWrapperProps, NavButton = sanitizedProps.NavButton, NextIcon = sanitizedProps.NextIcon, PrevIcon = sanitizedProps.PrevIcon, indicators = sanitizedProps.indicators, indicatorContainerProps = sanitizedProps.indicatorContainerProps, indicatorIconButtonProps = sanitizedProps.indicatorIconButtonProps, activeIndicatorIconButtonProps = sanitizedProps.activeIndicatorIconButtonProps, IndicatorIcon = sanitizedProps.IndicatorIcon;
     var showButton = function (next) {
         if (next === void 0) { next = true; }
         if (cycleNavigation)
@@ -138,8 +137,10 @@ var Carousel = function (props) {
             :
                 react_1.default.createElement(CarouselItem_1.CarouselItem, { key: "carousel-item0", state: state, index: 0, maxIndex: 0, child: children, animation: animation, duration: duration, height: height, setHeight: setChildrenHeight })),
         !navButtonsAlwaysInvisible && showButton(true) &&
-            react_1.default.createElement(Styled_1.StyledButtonWrapper, __assign({ "$next": true, "$prev": false, "$fullHeightHover": fullHeightHover }, navButtonsWrapperProps),
-                react_1.default.createElement(material_1.Button, null, "Hello")),
+            react_1.default.createElement(Styled_1.StyledButtonWrapper, __assign({ "$next": true, "$prev": false, "$fullHeightHover": fullHeightHover }, navButtonsWrapperProps), NavButton !== undefined ?
+                NavButton(__assign({ onClick: next, next: true, prev: false }, navButtonsProps))
+                :
+                    react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: next, "aria-label": "Next" }, navButtonsProps), NextIcon)),
         !navButtonsAlwaysInvisible && showButton(false) &&
             react_1.default.createElement(Styled_1.StyledButtonWrapper, __assign({ "$next": false, "$prev": true, "$fullHeightHover": fullHeightHover }, navButtonsWrapperProps), NavButton !== undefined ?
                 NavButton(__assign({ onClick: prev, next: false, prev: true }, navButtonsProps))
