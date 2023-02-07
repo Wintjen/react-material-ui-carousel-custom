@@ -83,25 +83,5 @@ exports.StyledButtonWrapper = (0, material_1.styled)("div", { shouldForwardProp:
         } }, ($fullHeightHover ? {
         height: "100%",
         top: "0"
-    } : undefined)), ($next ? {
-        '@media (min-width: 705px)': {
-            right: '30%',
-        },
-        '@media (max-width: 705px)': {
-            right: '20%',
-        },
-        '@media (max-width: 476px)': {
-            right: '20%',
-        },
-    } : undefined)), ($prev ? {
-        '@media (min-width: 705px)': {
-            left: '30%',
-        },
-        '@media (max-width: 705px)': {
-            left: '20%',
-        },
-        '@media (max-width: 476px)': {
-            left: '20%',
-        },
-    } : undefined)));
+    } : undefined)), ($next ? { right: 0 } : undefined)), ($prev ? { left: 0 } : undefined)));
 });

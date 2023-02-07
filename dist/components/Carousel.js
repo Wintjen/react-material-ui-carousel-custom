@@ -58,15 +58,12 @@ var Carousel = function (props) {
         }
     }, sanitizedProps.interval);
     var changeChild = (0, react_1.useCallback)(function (e) {
-        console.log('howdy');
         if (e.key === "ArrowLeft") {
-            console.log('howdy I"m working');
             var last = Array.isArray(children) ? children.length - 1 : 0;
             var nextActive = state.active - 1 < 0 ? (cycleNavigation ? last : state.active) : state.active - 1;
             setNext(nextActive, false);
         }
         else if (e.key === "ArrowRight") {
-            console.log('howdy no I"m working');
             var last = Array.isArray(children) ? children.length - 1 : 0;
             var nextActive = state.active + 1 > last ? (cycleNavigation ? 0 : state.active) : state.active + 1;
             setNext(nextActive, true);
