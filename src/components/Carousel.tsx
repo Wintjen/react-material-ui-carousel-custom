@@ -10,7 +10,7 @@ import
     StyledRoot
 } from './Styled';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Typography } from '@mui/material';
+import { Button} from '@mui/material';
 
 
 export const Carousel = (props: CarouselProps) =>
@@ -151,9 +151,7 @@ export const Carousel = (props: CarouselProps) =>
         navButtonsProps,
         navButtonsWrapperProps,
         NavButton,
-
-        NextIcon,
-        // PrevIcon,
+        PrevIcon,
 
         indicators,
         indicatorContainerProps,
@@ -224,20 +222,7 @@ export const Carousel = (props: CarouselProps) =>
 
             {!navButtonsAlwaysInvisible && showButton(true) &&
                 <StyledButtonWrapper $next $prev={false} $fullHeightHover={fullHeightHover} {...navButtonsWrapperProps}>
-                    {NavButton !== undefined ?
-                        NavButton({ onClick: next, next: true, prev: false, ...navButtonsProps })
-                        :
-                        <StyledIconButton
-                            $alwaysVisible={navButtonsAlwaysVisible}
-                            $fullHeightHover={fullHeightHover}
-                            onClick={next}
-                            aria-label="Next"
-                            {...navButtonsProps}
-                        >
-                            {NextIcon}
-                        </StyledIconButton>
-                    }
-                <Typography>Next Card</Typography>
+                    <Button>Hello</Button>
                 </StyledButtonWrapper>
             }
 
@@ -249,12 +234,11 @@ export const Carousel = (props: CarouselProps) =>
                         <StyledIconButton
                             $alwaysVisible={navButtonsAlwaysVisible}
                             $fullHeightHover={fullHeightHover}
-                            // onClick={prev}
+                            onClick={prev}
                             aria-label="Previous"
                             {...navButtonsProps}
                         >
-                            {/* {PrevIcon} */}
-                            <Typography>Previous Card</Typography>
+                            {PrevIcon}
                         </StyledIconButton>
                     }
                 </StyledButtonWrapper>
