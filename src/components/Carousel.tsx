@@ -235,9 +235,9 @@ export const Carousel = (props: CarouselProps) =>
                             {...navButtonsProps}
                         >
                             {NextIcon}
-                            <Typography>Next Card</Typography>
                         </StyledIconButton>
                     }
+                <Typography>Next Card</Typography>
                 </StyledButtonWrapper>
             }
 
@@ -254,9 +254,9 @@ export const Carousel = (props: CarouselProps) =>
                             {...navButtonsProps}
                         >
                             {PrevIcon}
-                            <Typography>Previous Card</Typography>
                         </StyledIconButton>
                     }
+                <Typography>Previous Card</Typography>
                 </StyledButtonWrapper>
             }
 
