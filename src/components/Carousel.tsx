@@ -237,7 +237,7 @@ export const Carousel = (props: CarouselProps) =>
                             {NextIcon}
                         </StyledIconButton>
                     }
-                    {navButtonsAlwaysInvisible && (
+                    {!navButtonsAlwaysInvisible && (
                         <Typography style={{
                             position: 'absolute',
                             marginTop: '30px',
@@ -266,7 +266,7 @@ export const Carousel = (props: CarouselProps) =>
                             {PrevIcon}
                         </StyledIconButton>
                     }
-                    {navButtonsAlwaysInvisible && (
+                    {!navButtonsAlwaysInvisible && (
                         <Typography
                         style={{
                             position: 'absolute',
