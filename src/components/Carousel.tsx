@@ -237,7 +237,11 @@ export const Carousel = (props: CarouselProps) =>
                             >
                                 {NextIcon}
                             </StyledIconButton>
-                            <Typography style={{
+                            <Typography 
+                            sx={{
+                                display: navButtonsAlwaysInvisible ? 'inherit' : 'none'
+                            }} 
+                            style={{    
                                 position: 'absolute',
                                 marginTop: '30px',
                                 width: '100px',
@@ -278,6 +282,9 @@ export const Carousel = (props: CarouselProps) =>
                                 {PrevIcon}
                             </StyledIconButton>
                             <Typography
+                            sx={{
+                                display: navButtonsAlwaysInvisible ? 'inherit' : 'none'
+                            }}
                             style={{
                                 position: 'absolute',
                                 marginTop: '30px',

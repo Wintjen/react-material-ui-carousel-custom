@@ -143,7 +143,9 @@ var Carousel = function (props) {
                 :
                     react_1.default.createElement(react_1.default.Fragment, null,
                         react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: next, "aria-label": "Next" }, navButtonsProps), NextIcon),
-                        react_1.default.createElement(material_1.Typography, { style: {
+                        react_1.default.createElement(material_1.Typography, { sx: {
+                                display: navButtonsAlwaysInvisible ? 'inherit' : 'none'
+                            }, style: {
                                 position: 'absolute',
                                 marginTop: '30px',
                                 width: '100px',
@@ -155,7 +157,9 @@ var Carousel = function (props) {
                 :
                     react_1.default.createElement(react_1.default.Fragment, null,
                         react_1.default.createElement(Styled_1.StyledIconButton, __assign({ "$alwaysVisible": navButtonsAlwaysVisible, "$fullHeightHover": fullHeightHover, onClick: prev, "aria-label": "Previous" }, navButtonsProps), PrevIcon),
-                        react_1.default.createElement(material_1.Typography, { style: {
+                        react_1.default.createElement(material_1.Typography, { sx: {
+                                display: navButtonsAlwaysInvisible ? 'inherit' : 'none'
+                            }, style: {
                                 position: 'absolute',
                                 marginTop: '30px',
                                 width: '135px',
