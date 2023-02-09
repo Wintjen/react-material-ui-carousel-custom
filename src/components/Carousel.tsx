@@ -237,15 +237,17 @@ export const Carousel = (props: CarouselProps) =>
                             {NextIcon}
                         </StyledIconButton>
                     }
-                    <Typography style={{
-                        position: 'absolute',
-                        marginTop: '30px',
-                        width: '100px',
-                        right: '-10px'
-                    }}
-                    >
-                        Next Card
-                    </Typography>
+                    {navButtonsAlwaysInvisible && (
+                        <Typography style={{
+                            position: 'absolute',
+                            marginTop: '30px',
+                            width: '100px',
+                            right: '-10px'
+                        }}
+                        >
+                            Next Card
+                        </Typography>
+                    )}
                 </StyledButtonWrapper>
             }
 
@@ -264,16 +266,18 @@ export const Carousel = (props: CarouselProps) =>
                             {PrevIcon}
                         </StyledIconButton>
                     }
-                    <Typography
-                    style={{
-                        position: 'absolute',
-                        marginTop: '30px',
-                        width: '135px',
-                        left: '10px'
-                    }}
-                    >
-                        Previous Card
-                    </Typography>
+                    {navButtonsAlwaysInvisible && (
+                        <Typography
+                        style={{
+                            position: 'absolute',
+                            marginTop: '30px',
+                            width: '135px',
+                            left: '10px'
+                        }}
+                        >
+                            Previous Card
+                        </Typography>
+                    )}
                 </StyledButtonWrapper>
             }
 
