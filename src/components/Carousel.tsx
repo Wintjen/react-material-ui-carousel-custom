@@ -227,17 +227,28 @@ export const Carousel = (props: CarouselProps) =>
                     {NavButton !== undefined ?
                         NavButton({ onClick: next, next: true, prev: false, ...navButtonsProps })
                         :
-                        <StyledIconButton
-                            $alwaysVisible={navButtonsAlwaysVisible}
-                            $fullHeightHover={fullHeightHover}
-                            onClick={next}
-                            aria-label="Next"
-                            {...navButtonsProps}
-                        >
-                            {NextIcon}
-                        </StyledIconButton>
+                        <>
+                            <StyledIconButton
+                                $alwaysVisible={navButtonsAlwaysVisible}
+                                $fullHeightHover={fullHeightHover}
+                                onClick={next}
+                                aria-label="Next"
+                                {...navButtonsProps}
+                            >
+                                {NextIcon}
+                            </StyledIconButton>
+                            <Typography style={{
+                                position: 'absolute',
+                                marginTop: '30px',
+                                width: '100px',
+                                right: '-10px'
+                            }}
+                            >
+                                Next Card
+                            </Typography>
+                        </>
                     }
-                    {!navButtonsAlwaysInvisible && (
+                    {/* {!navButtonsAlwaysInvisible && (
                         <Typography style={{
                             position: 'absolute',
                             marginTop: '30px',
@@ -247,7 +258,7 @@ export const Carousel = (props: CarouselProps) =>
                         >
                             Next Card
                         </Typography>
-                    )}
+                    )} */}
                 </StyledButtonWrapper>
             }
 
@@ -256,17 +267,29 @@ export const Carousel = (props: CarouselProps) =>
                     {NavButton !== undefined ?
                         NavButton({ onClick: prev, next: false, prev: true, ...navButtonsProps })
                         :
-                        <StyledIconButton
-                            $alwaysVisible={navButtonsAlwaysVisible}
-                            $fullHeightHover={fullHeightHover}
-                            onClick={prev}
-                            aria-label="Previous"
-                            {...navButtonsProps}
-                        >
-                            {PrevIcon}
-                        </StyledIconButton>
+                        <>
+                            <StyledIconButton
+                                $alwaysVisible={navButtonsAlwaysVisible}
+                                $fullHeightHover={fullHeightHover}
+                                onClick={prev}
+                                aria-label="Previous"
+                                {...navButtonsProps}
+                            >
+                                {PrevIcon}
+                            </StyledIconButton>
+                            <Typography
+                            style={{
+                                position: 'absolute',
+                                marginTop: '30px',
+                                width: '135px',
+                                left: '10px'
+                            }}
+                            >
+                                Previous Card
+                            </Typography>
+                        </>
                     }
-                    {!navButtonsAlwaysInvisible && (
+                    {/* {!navButtonsAlwaysInvisible && (
                         <Typography
                         style={{
                             position: 'absolute',
@@ -277,7 +300,7 @@ export const Carousel = (props: CarouselProps) =>
                         >
                             Previous Card
                         </Typography>
-                    )}
+                    )} */}
                 </StyledButtonWrapper>
             }
 
